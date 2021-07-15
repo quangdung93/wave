@@ -15,9 +15,12 @@
 // Authentication routes
 Auth::routes();
 
-
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
+});
+
+Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();
 });
 
 // Include Wave Routes

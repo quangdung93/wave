@@ -182,6 +182,7 @@ return [
         /*
          * Package Service Providers...
          */
+        UniSharp\LaravelFilemanager\LaravelFilemanagerServiceProvider::class,
         Lab404\Impersonate\ImpersonateServiceProvider::class,
         Wave\WaveServiceProvider::class,
         DevDojo\Themes\ThemesServiceProvider::class,
