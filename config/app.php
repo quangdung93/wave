@@ -182,7 +182,6 @@ return [
         /*
          * Package Service Providers...
          */
-
         Lab404\Impersonate\ImpersonateServiceProvider::class,
         Wave\WaveServiceProvider::class,
         DevDojo\Themes\ThemesServiceProvider::class,

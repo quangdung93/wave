@@ -136,7 +136,7 @@ return [
          */
         'locales' => [
             'en',
-            //'pt',
+            'vi',
         ],
     ],
 
@@ -210,7 +210,7 @@ return [
     ],
 
     'additional_js' => [
-        //'js/custom.js',
+        'admin/js/custom-tinymce.js',
     ],
 
     'googlemaps' => [

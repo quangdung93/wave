@@ -17,6 +17,9 @@ class AppServiceProvider extends ServiceProvider
         if ($this->app->environment() == 'production') {
             $this->app['request']->server->set('HTTPS', true);
         }
+        elseif($this->app->environment() == 'local') {
+            $this->app->register(\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
+        }
         // rad man
         Schema::defaultStringLength(191);
     }
