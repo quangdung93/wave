@@ -27,7 +27,8 @@ return [
     */
 
     'controllers' => [
-        'namespace' => 'TCG\\Voyager\\Http\\Controllers',
+        // 'namespace' => 'TCG\\Voyager\\Http\\Controllers',
+        'namespace' => 'App\\Http\\Controllers\\Voyager',
     ],
 
     /*
@@ -135,8 +136,8 @@ return [
          * Select languages that are supported.
          */
         'locales' => [
-            'en',
             'vi',
+            'en',
         ],
     ],
 
@@ -202,7 +203,7 @@ return [
 
     'primary_color' => '#1683FB',
 
-    'show_dev_tips' => true, // Show development tip "How To Use:" in Menu and Settings
+    'show_dev_tips' => env('APP_ENV') == 'local' ? true : false, // Show development tip "How To Use:" in Menu and Settings
 
     // Here you can specify additional assets you would like to be included in the master.blade
     'additional_css' => [
@@ -210,7 +211,8 @@ return [
     ],
 
     'additional_js' => [
-        'admin/js/custom-tinymce.js',
+        'tinymce/js/tinymce/tinymce.min.js',
+        'admin/js/common.js',
     ],
 
     'googlemaps' => [
